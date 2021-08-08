@@ -27,9 +27,12 @@ def fiver_counter(journalists)
   return fivers_number
 end
 
-
 # Combien commencent par une majuscule (première lettre juste après le @) ?
-
+def uppercase_counter(journalists)
+  uppercasers_total = journalists.count {|e| e =~ /^@[[:upper:]]/} # https://stackoverflow.com/questions/52634598/how-to-count-words-in-array-that-start-with-a-capital-letter
+  puts "Il y a #{uppercasers_total} handles qui commencent par une majuscule."
+  return uppercasers_total
+end
 
 
 # Trie la liste de handle par ordre alphabétique.
@@ -47,6 +50,17 @@ end
 # Sors-moi une répartition des handle par taille de ces derniers (nombre de handle avec 1 caractère, nombre de handle avec 2 caractères, nombre de handle avec 3 caractères, etc)
 
 ####################################
+
+def next_answer
+  gets
+  print "\033[2J\033[H"
+end
+
 array_counter(journalists)
+next_answer
 shortest_finder(journalists)
+next_answer
 fiver_counter(journalists)
+next_answer
+uppercase_counter(journalists)
+next_answer
