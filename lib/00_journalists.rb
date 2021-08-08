@@ -34,10 +34,14 @@ def uppercase_counter(journalists)
   return uppercasers_total
 end
 
-
 # Trie la liste de handle par ordre alphabétique.
 
-
+def get_alphabetical_order(journalists)
+  array_by_alphabetical_order = journalists.sort_by(&:downcase)
+  puts "Voici la liste triée par ordre alphabétique:"
+  print array_by_alphabetical_order
+  return array_by_alphabetical_order 
+end
 
 # Trie la liste de handle par taille des handle (les plus petits en premiers, les plus grands après)
 
@@ -53,7 +57,7 @@ end
 
 def next_answer
   gets
-  print "\033[2J\033[H"
+  print "\033[2J\033[H" # screen cleaner
 end
 
 array_counter(journalists)
@@ -63,4 +67,6 @@ next_answer
 fiver_counter(journalists)
 next_answer
 uppercase_counter(journalists)
+next_answer
+get_alphabetical_order(journalists)
 next_answer
