@@ -84,14 +84,7 @@ def distribution_maker(journalists)
   end
 end
 
-####################################
-
-# def next_answer
-#   gets
-#   system "clear"
-# end
-
-
+#################################################
 
 def menu
 
@@ -115,6 +108,7 @@ def menu
 
 end
 
+#################################################
 
 def next_
   puts
@@ -122,6 +116,8 @@ def next_
   gets
   system "clear"
 end
+
+#################################################
 
 def perform
   journalists = array
