@@ -44,11 +44,16 @@ def get_alphabetical_order(journalists)
 end
 
 # Trie la liste de handle par taille des handle (les plus petits en premiers, les plus grands après)
-
+def order_by_length(journalists)
+  ordered_list_by_length = journalists.sort_by(&:length)
+  puts "Voici la liste triée par longueur des handles:"
+  print ordered_list_by_length
+  return ordered_list_by_length
+end
 
 
 # Quelle est la position dans l'array de la personne @epenser ?
-
+def epenser_finder(jornalists)
 
 
 # Sors-moi une répartition des handle par taille de ces derniers (nombre de handle avec 1 caractère, nombre de handle avec 2 caractères, nombre de handle avec 3 caractères, etc)
@@ -57,7 +62,7 @@ end
 
 def next_answer
   gets
-  print "\033[2J\033[H" # screen cleaner
+  system "clear"
 end
 
 array_counter(journalists)
@@ -69,4 +74,8 @@ next_answer
 uppercase_counter(journalists)
 next_answer
 get_alphabetical_order(journalists)
+next_answer
+order_by_length(journalists)
+next_answer
+epenser_finder(journalists)
 next_answer
