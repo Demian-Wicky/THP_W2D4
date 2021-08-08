@@ -61,6 +61,25 @@ end
 
 # Sors-moi une répartition des handle par taille de ces derniers (nombre de handle avec 1 caractère, nombre de handle avec 2 caractères, nombre de handle avec 3 caractères, etc)
 
+def distribution_maker(journalists)
+  max_length_handle = journalists.sort_by(&:length)[-1].length
+
+  1.upto(max_length_handle) do |i|
+    
+    counter = 0
+    journalists.each do |j|
+      if j.length == i
+        counter +=1
+      end
+    end
+
+    if counter != 0
+    puts "Nombre de handle avec #{i} caractères: #{counter}"
+    end
+
+  end
+end
+
 ####################################
 
 def next_answer
@@ -82,3 +101,4 @@ order_by_length(journalists)
 next_answer
 position_finder(journalists)
 next_answer
+distribution_maker(journalists)
