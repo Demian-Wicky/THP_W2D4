@@ -78,7 +78,7 @@ def distribution_maker(journalists)
     end
 
     if counter != 0
-      puts "Nombre de handle avec #{i} caractères: #{counter}"
+      puts "Nombre de handle avec #{i - 1} caractères: #{counter}"
     end
 
   end
