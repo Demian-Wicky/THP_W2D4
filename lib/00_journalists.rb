@@ -14,9 +14,18 @@ def shortest_finder(journalists)
   return shortest
 end
 
-
 # Combien y-a-t'il de handle contenant 5 caractères (le @ ne compte pas pour un caractère)
-
+def fiver_counter(journalists)
+  fivers = []
+  journalists.each do |i|
+    if i.length == 6
+      fivers << i
+    end
+  end
+  fivers_number = fivers.count
+  puts "Il y a #{fivers_number} handles de 5 caractères (#{fivers})." 
+  return fivers_number
+end
 
 
 # Combien commencent par une majuscule (première lettre juste après le @) ?
@@ -40,3 +49,4 @@ end
 ####################################
 array_counter(journalists)
 shortest_finder(journalists)
+fiver_counter(journalists)
