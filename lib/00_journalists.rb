@@ -56,6 +56,7 @@ end
 def position_finder(journalists)
   position = journalists.index("@epenser")
   puts "@epenser est en position #{position} dans l'array."
+  return position
 end
 
 # Sors-moi une répartition des handle par taille de ces derniers (nombre de handle avec 1 caractère, nombre de handle avec 2 caractères, nombre de handle avec 3 caractères, etc)
