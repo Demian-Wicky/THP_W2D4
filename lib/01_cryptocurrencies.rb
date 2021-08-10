@@ -9,7 +9,6 @@ def value
 end
 
 def hash
-  crypto.zip(value).to_h
+  crypto.zip(value.map(&:to_f)).to_h
 end
 
-puts hash
